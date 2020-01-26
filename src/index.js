@@ -1,11 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Home from "./page/Home";
 
 import "./styles.css";
 
 import Login from "./page/Login";
+import Home from "./page/Home";
+import Content from "./page/Content";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={Login} />
           <Route exact path="/home/" component={Home} />
+          <Route exact path="/content/" component={Content} />
         </Switch>
       </Router>
     </div>
