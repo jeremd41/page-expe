@@ -63,7 +63,7 @@ class SideNav extends Component {
             <Link to="/home/">Home</Link>
           </li>
           <li>
-            <Link to="/home/">Journals</Link>
+            <Link to="/journals/">Journals</Link>
           </li>
           <li>
             <Link to="/home/">Notifications</Link>
