@@ -6,6 +6,7 @@ import Centre from "../components/Centre";
 import Side from "../components/Side";
 import CardSideHome from "../components/card/CardSideHome";
 import TopPage from "../components/TopPage";
+import CardProfile from "../components/card/CardProfile";
 
 import brian from "../image/brian.png";
 import clara from "../image/clara.png";
@@ -16,7 +17,6 @@ import back1 from "../image/back1.png";
 import back2 from "../image/back2.png";
 import back3 from "../image/back3.png";
 import back4 from "../image/back4.png";
-import CardProfile from "../components/card/CardProfile";
 
 const Wrapper = styled.div`
   h3 {
@@ -73,7 +73,7 @@ class Journals extends Component {
             <CardProfile photo={brian} user="Test Test" activite="Filmmaker" />
           </Centre>
           <Side>
-            <h3>Recommended</h3>
+            <h3>Latest content</h3>
             {this.state.cote.map(latest => {
               return (
                 <CardSideHome

@@ -9,17 +9,19 @@ import Home from "./page/Home";
 import Content from "./page/Content";
 import Journals from "./page/Journals";
 import Notifications from "./page/Notifications";
+import Search from "./page/Search";
 
 function App() {
   return (
     <div className="App">
-      <Router forceRefresh={false}>
+      <Router forceRefresh={true}>
         <Switch>
           <Route exact path="/" component={Login} />
           <Route exact path="/home/" component={Home} />
           <Route exact path="/content/" component={Content} />
           <Route exact path="/journals/" component={Journals} />
           <Route exact path="/notifications/" component={Notifications} />
+          <Route exact path="/search/:data" component={Search} />
         </Switch>
       </Router>
     </div>

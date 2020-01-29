@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Nav = styled.div`
   margin: 0 5px;
@@ -50,23 +50,29 @@ class SideNav extends Component {
     return (
       <Nav>
         <h1>
-          <Link to="/home/">
+          <NavLink to="/home/">
             <span>P</span>
             <span>A</span>
             <span>G</span>
             <span>E</span>
             <span className="X">X</span>
-          </Link>
+          </NavLink>
         </h1>
         <ul>
           <li>
-            <Link to="/home/">Home</Link>
+            <NavLink activeStyle={{ color: "#23d3ff" }} to="/home/">
+              Home
+            </NavLink>
           </li>
           <li>
-            <Link to="/journals/">Journals</Link>
+            <NavLink activeStyle={{ color: "#23d3ff" }} to="/journals/">
+              Journals
+            </NavLink>
           </li>
           <li>
-            <Link to="/home/">Notifications</Link>
+            <NavLink activeStyle={{ color: "#23d3ff" }} to="/notifications/">
+              Notifications
+            </NavLink>
           </li>
         </ul>
       </Nav>
