@@ -1,22 +1,44 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { Redirect } from "react-router-dom";
+import { Redirect, Link } from "react-router-dom";
+
+import Create from "../../image/icone/createBtn.svg";
+import Profile from "../../image/icone/profileBtn.svg";
 
 const Bar = styled.div`
   height: 100px;
   width: 100%;
   position: fixe;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   top: 0;
 
-  input {
+  .bar {
     width: 60%;
+  }
+
+  input {
+    width: 100%;
     height: 44px;
     border: none;
     border-radius: 20px;
+    display: block;
     padding: 0 15px;
     margin: 20px;
     font-family: "Poppins";
     box-shadow: 0px 0px 10px #0000000f;
+  }
+
+  ul {
+    display: flex;
+    text-align: right;
+    justify-content: flex-end;
+    width: 40%;
+
+    li {
+      width: 20%;
+    }
   }
 
   :active {
@@ -43,14 +65,29 @@ class SearchBar extends Component {
   render() {
     return (
       <Bar>
-        <input
-          type="search"
-          placeholder="Search"
-          name="search"
-          onChange={this.handleChange}
-          onKeyPress={this.handleKeydown}
-          value={this.state.search}
-        />
+        <div className="bar">
+          <input
+            type="search"
+            placeholder="Search"
+            name="search"
+            onChange={this.handleChange}
+            onKeyPress={this.handleKeydown}
+            value={this.state.search}
+          />
+        </div>
+        <ul>
+          <li>
+            <Link to="/">
+              <img src={Create} alt="icone" />
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <img src={Profile} alt="icone" />
+            </Link>
+          </li>
+        </ul>
+
         {this.state.actRedirect ? (
           <Redirect to={"/search/" + this.state.search} />
         ) : (

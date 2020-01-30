@@ -16,12 +16,12 @@ function App() {
     <div className="App">
       <Router forceRefresh={true}>
         <Switch>
-          <Route exact path="/" component={Login} />
-          <Route exact path="/home/" component={Home} />
-          <Route exact path="/content/" component={Content} />
-          <Route exact path="/journals/" component={Journals} />
-          <Route exact path="/notifications/" component={Notifications} />
-          <Route exact path="/search/:data" component={Search} />
+          <Route push exact path="/" component={Login} />
+          <Route push exact path="/home/" component={Home} />
+          <Route push exact path="/content/" component={Content} />
+          <Route push exact path="/journals/" component={Journals} />
+          <Route push exact path="/notifications/" component={Notifications} />
+          <Route push exact path="/search/:data" component={Search} />
         </Switch>
       </Router>
     </div>
