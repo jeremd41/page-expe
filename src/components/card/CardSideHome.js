@@ -13,6 +13,7 @@ const Wrapper = styled.div`
 
   .top-back {
     height: 270px;
+    background-size: cover;
 
     h5 {
       font-size: 1.25rem;

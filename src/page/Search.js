@@ -5,6 +5,8 @@ import Layout from "../components/layout/Layout";
 import Centre from "../components/Centre";
 import Side from "../components/Side";
 import CardSideHome from "../components/card/CardSideHome";
+import TopPage from "../components/TopPage";
+import CardProfile from "../components/card/CardProfile";
 
 import brian from "../image/brian.png";
 import clara from "../image/clara.png";
@@ -53,13 +55,67 @@ class Search extends Component {
         photo: clara,
         date: " 29 Decembre 2019"
       }
+    ],
+    result: [
+      {
+        id: 1,
+        user: "Jackson Lipski",
+        photo: brian,
+        activite: "activist ans Filmmaker"
+      },
+      {
+        id: 2,
+        user: "Clara Marco",
+        photo: clara,
+        activite: "author"
+      },
+      {
+        id: 3,
+        user: "Mark Dickson",
+        photo: mark,
+        activite: "author"
+      },
+      {
+        id: 4,
+        user: "Sean Pauolo",
+        photo: sean,
+        activite: "Photographe"
+      }
     ]
   };
+
   render() {
+    const searchText = this.props.match.params.data;
+
+    const displayedList = this.state.result.filter(search => {
+      let searchValue1 = search.user.toLowerCase();
+      return searchValue1.indexOf(searchText) !== -1;
+    });
+
+    let rendu;
+
+    if (displayedList.length === 0) {
+      rendu = <p>Pas de résultat ...</p>;
+    } else {
+      rendu = displayedList.map(profile => {
+        return (
+          <CardProfile
+            key={profile.id}
+            photo={profile.photo}
+            user={profile.user}
+            activite={profile.activite}
+          />
+        );
+      });
+    }
+
     return (
       <Wrapper>
         <Layout>
-          <Centre>{this.props.match.params.data}</Centre>
+          <Centre>
+            <TopPage info="Search result ( 1 )" />
+            <div>{rendu}</div>
+          </Centre>
           <Side>
             <h3>Recommended</h3>
             {this.state.cote.map(latest => {

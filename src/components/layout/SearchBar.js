@@ -4,6 +4,7 @@ import { Redirect, Link } from "react-router-dom";
 
 import Create from "../../image/icone/createBtn.svg";
 import Profile from "../../image/icone/profileBtn.svg";
+import IconSearch from "../../image/icone/search.svg";
 
 const Bar = styled.div`
   height: 100px;
@@ -16,6 +17,15 @@ const Bar = styled.div`
 
   .bar {
     width: 60%;
+    height: 100px;
+    position: relative;
+
+    img {
+      position: absolute;
+      margin-top: 30px;
+      right: 0;
+      top: 0;
+    }
   }
 
   input {
@@ -74,6 +84,7 @@ class SearchBar extends Component {
             onKeyPress={this.handleKeydown}
             value={this.state.search}
           />
+          <img className="icone-search" src={IconSearch} alt="icone search" />
         </div>
         <ul>
           <li>
@@ -89,7 +100,7 @@ class SearchBar extends Component {
         </ul>
 
         {this.state.actRedirect ? (
-          <Redirect to={"/search/" + this.state.search} />
+          <Redirect push to={"/search/" + this.state.search} />
         ) : (
           ""
         )}
