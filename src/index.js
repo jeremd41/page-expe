@@ -18,7 +18,7 @@ function App() {
         <Switch>
           <Route push exact path="/" component={Login} />
           <Route push exact path="/home/" component={Home} />
-          <Route push exact path="/content/" component={Content} />
+          <Route push exact path="/content/:article" component={Content} />
           <Route push exact path="/journals/" component={Journals} />
           <Route push exact path="/notifications/" component={Notifications} />
           <Route push exact path="/search/:data" component={Search} />

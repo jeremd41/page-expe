@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 import Layout from "../components/layout/Layout";
 import Centre from "../components/Centre";
@@ -130,14 +131,16 @@ class Home extends Component {
             <h3>Latest content</h3>
             {this.state.cote.map(latest => {
               return (
-                <CardSideHome
-                  key={latest.id}
-                  image={latest.back}
-                  title={latest.title}
-                  photo={latest.photo}
-                  user={latest.user}
-                  date={latest.date}
-                />
+                <Link to={"/content/" + latest.id} key={latest.id}>
+                  <CardSideHome
+                    lien={latest.id}
+                    image={latest.back}
+                    title={latest.title}
+                    photo={latest.photo}
+                    user={latest.user}
+                    date={latest.date}
+                  />
+                </Link>
               );
             })}
           </Side>
