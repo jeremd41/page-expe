@@ -37,7 +37,7 @@ const Bar = styled.div`
     padding: 0 15px;
     margin: 20px;
     font-family: "Poppins";
-    box-shadow: 0px 0px 10px #0000000f;
+    box-shadow: 0px 3px 35px #00000021;
   }
 
   ul {

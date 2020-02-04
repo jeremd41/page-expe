@@ -8,6 +8,8 @@ const Nav = styled.div`
   width: 18%;
   height: 100vh;
   background: #8c8c8c0d;
+  box-shadow: 0px 3px 35px #00000021;
+  border-radius: 15px;
   position: fixe;
   left: 0;
 

@@ -68,9 +68,63 @@ const Wrapper = styled.div`
       border-bottom: 1px solid #00000029;
     }
 
-    p {
+    .content {
       width: 95%;
       margin: 46px auto 0 auto;
+    }
+
+    .card-btn {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      width: 95%;
+      margin: 0 auto;
+
+      .text-btn {
+        padding: 15px;
+        font-weight: bold;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .bottom-page-content {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    h2 {
+      width: 90%;
+      border-bottom: 1px solid #00000029;
+      margin-bottom: 57px;
+    }
+
+    .review {
+      width: 90%;
+      padding: 0 0 15px 0;
+      background: #e8ecff;
+    }
+
+    .review-info {
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid #00000029;
+
+      h4 {
+        font-size: 20px;
+      }
+
+      img {
+        width: 70px;
+        height: 74px;
+      }
+    }
+
+    .review-content {
+      border-bottom: 1px solid #00000029;
+      padding: 15px;
     }
   }
 `;
@@ -247,7 +301,30 @@ class Content extends Component {
               <div className="middle-page-content">
                 <img src={found.image} alt="article" />
                 <h1>{found.title}</h1>
-                <p>{found.content}</p>
+                <p className="content">{found.content}</p>
+                <div className="card-btn">
+                  <p className="text-btn">Promote</p>
+                  <p className="text-btn">React</p>
+                </div>
+              </div>
+              <div className="bottom-page-content">
+                <h2>Review</h2>
+                {found.review.map(post => {
+                  return (
+                    <div className="review" key={post.id}>
+                      <div className="review-info">
+                        <img src={post.photo} alt="profile" />
+                        <div className="info-side">
+                          <h4>{post.user}</h4>
+                          <p>{post.time}</p>
+                        </div>
+                      </div>
+                      <div className="review-content">
+                        <p>{post.comment}</p>
+                      </div>
+                    </div>
+                  );
+                })}
               </div>
             </div>
           </Centre>

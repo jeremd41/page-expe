@@ -8,10 +8,10 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: flex-start;
   position: fixe;
-  background: #EEF0FE;
+  background: #fff;
   width: 100%;
 
-  .container{
+  .container {
     width: 90%;
   }
 
@@ -20,7 +20,7 @@ const Wrapper = styled.div`
     margin: 15px;
   }
 
-  .content{
+  .content {
     display: flex;
     justify-content: space-around;
   }
