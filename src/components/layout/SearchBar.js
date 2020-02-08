@@ -6,6 +6,8 @@ import Create from "../../image/icone/createBtn.svg";
 import Profile from "../../image/icone/profileBtn.svg";
 import IconSearch from "../../image/icone/search.svg";
 
+import DownProfile from "../dropdown/DownProfile";
+
 const Bar = styled.div`
   height: 100px;
   width: 100%;
@@ -40,14 +42,15 @@ const Bar = styled.div`
     box-shadow: 0px 3px 35px #00000021;
   }
 
-  ul {
+  .group-icone-search {
     display: flex;
-    text-align: right;
-    justify-content: flex-end;
+    text-align: left;
+    justify-content: center;
     width: 40%;
 
-    li {
-      width: 20%;
+    .item-icone {
+      width: 10%;
+      margin: 0 10px;
     }
   }
 
@@ -59,7 +62,8 @@ const Bar = styled.div`
 class SearchBar extends Component {
   state = {
     search: "",
-    actRedirect: false
+    actRedirect: false,
+    downProfile: false
   };
 
   handleChange = event => {
@@ -72,7 +76,18 @@ class SearchBar extends Component {
     }
   };
 
+  handleClick = event => {
+    this.setState({ downProfile: !this.state.downProfile });
+  };
+
   render() {
+    const afficherModal = this.state.downProfile;
+    let modal;
+
+    if (afficherModal) {
+      modal = <DownProfile cache={this.handleClick} />;
+    }
+
     return (
       <Bar>
         <div className="bar">
@@ -86,14 +101,14 @@ class SearchBar extends Component {
           />
           <img className="icone-search" src={IconSearch} alt="icone search" />
         </div>
-        <ul>
-          <li>
+        <ul className="group-icone-search">
+          <li className="item-icone">
             <Link to="/">
               <img src={Create} alt="icone" />
             </Link>
           </li>
-          <li>
-            <Link to="/">
+          <li className="item-icone">
+            <Link onClick={this.handleClick}>
               <img src={Profile} alt="icone" />
             </Link>
           </li>
@@ -104,6 +119,7 @@ class SearchBar extends Component {
         ) : (
           ""
         )}
+        {modal}
       </Bar>
     );
   }

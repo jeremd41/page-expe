@@ -14,7 +14,7 @@ import Search from "./page/Search";
 function App() {
   return (
     <div className="App">
-      <Router forceRefresh={true}>
+      <Router forceRefresh={false}>
         <Switch>
           <Route push exact path="/" component={Login} />
           <Route push exact path="/home/" component={Home} />
