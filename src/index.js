@@ -22,6 +22,7 @@ function App() {
           <Route push exact path="/journals/" component={Journals} />
           <Route push exact path="/notifications/" component={Notifications} />
           <Route push exact path="/search/:data" component={Search} />
+          <Route push exact path="/search/" component={Search} />
         </Switch>
       </Router>
     </div>

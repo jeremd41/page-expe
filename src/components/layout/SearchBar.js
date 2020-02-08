@@ -81,11 +81,11 @@ class SearchBar extends Component {
   };
 
   render() {
-    const afficherModal = this.state.downProfile;
-    let modal;
+    const afficherDownProfile = this.state.downProfile;
+    let dropdownProfile;
 
-    if (afficherModal) {
-      modal = <DownProfile cache={this.handleClick} />;
+    if (afficherDownProfile) {
+      dropdownProfile = <DownProfile cache={this.handleClick} />;
     }
 
     return (
@@ -119,7 +119,7 @@ class SearchBar extends Component {
         ) : (
           ""
         )}
-        {modal}
+        {dropdownProfile}
       </Bar>
     );
   }

@@ -1,11 +1,16 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 
+import Ellipsis from "../../image/icone/ellipsis.js";
+import DownContent from "../dropdown/DownContent.js";
+import { Link } from "react-router-dom";
+
 const Wrapper = styled.div`
   width: 98%;
   margin: 35px auto;
   border: 1px solid #00000029;
   box-shadow: 0px 3px 6px #00000029;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -53,10 +58,36 @@ const Wrapper = styled.div`
       cursor: pointer;
     }
   }
+
+  svg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 25px 25px 0 0;
+    cursor: pointer;
+
+    :hover {
+      color: #59ddff;
+    }
+  }
 `;
 
 class CardFil extends Component {
+  state = {
+    downcontent: false
+  };
+
+  handleShow = () => {
+    this.setState({ downcontent: !this.state.downcontent });
+  };
+
   render() {
+    const afficherDownContent = this.state.downcontent;
+    let dropdownContent;
+
+    if (afficherDownContent) {
+      dropdownContent = <DownContent cache={this.handleClick} />;
+    }
     return (
       <Wrapper>
         <div className="top-card">
@@ -71,6 +102,10 @@ class CardFil extends Component {
           <p>Promote</p>
           <p>React</p>
         </div>
+        <div className="btn-content" onClick={this.handleShow}>
+          <Ellipsis />
+        </div>
+        {dropdownContent}
       </Wrapper>
     );
   }

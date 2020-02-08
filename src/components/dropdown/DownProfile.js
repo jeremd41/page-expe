@@ -42,7 +42,7 @@ class DownProfile extends Component {
             <Link>Profile</Link>
           </li>
           <li>
-            <Link>Notifications</Link>
+            <Link to="/notifications/">Notifications</Link>
           </li>
           <li>
             <Link>Explore</Link>
