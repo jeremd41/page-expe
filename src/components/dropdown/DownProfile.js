@@ -6,7 +6,7 @@ const Wrapper = styled.div`
   width: 301px;
   height: 354px;
   background: #fff;
-  z-index: 5;
+  z-index: 55;
   position: absolute;
   top: 10%;
   right: 15%;
@@ -39,7 +39,7 @@ class DownProfile extends Component {
       <Wrapper>
         <ul>
           <li>
-            <Link>Profile</Link>
+            <Link onClick={this.props.init}>Profile</Link>
           </li>
           <li>
             <Link to="/notifications/">Notifications</Link>

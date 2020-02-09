@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
+import Fade from "react-reveal/Fade";
 
 import Ellipsis from "../../image/icone/ellipsis.js";
 import DownContent from "../dropdown/DownContent.js";
@@ -12,6 +13,7 @@ const Wrapper = styled.div`
   box-shadow: 0px 3px 6px #00000029;
   position: relative;
   display: flex;
+  z-index: 0;
   flex-direction: column;
   justify-content: space-between;
   background: #eef0fe;

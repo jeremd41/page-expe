@@ -7,6 +7,7 @@ import Profile from "../../image/icone/profileBtn.svg";
 import IconSearch from "../../image/icone/search.svg";
 
 import DownProfile from "../dropdown/DownProfile";
+import SettingProfile from "../modal/SettingProfile";
 
 const Bar = styled.div`
   height: 100px;
@@ -30,7 +31,7 @@ const Bar = styled.div`
     }
   }
 
-  input {
+  .input-search {
     width: 100%;
     height: 44px;
     border: none;
@@ -63,7 +64,8 @@ class SearchBar extends Component {
   state = {
     search: "",
     actRedirect: false,
-    downProfile: false
+    downProfile: false,
+    settingProfile: false
   };
 
   handleChange = event => {
@@ -80,18 +82,31 @@ class SearchBar extends Component {
     this.setState({ downProfile: !this.state.downProfile });
   };
 
+  handleSettingProfile = () => {
+    this.setState({
+      settingProfile: !this.state.settingProfile
+    });
+  };
+
   render() {
     const afficherDownProfile = this.state.downProfile;
     let dropdownProfile;
 
     if (afficherDownProfile) {
-      dropdownProfile = <DownProfile cache={this.handleClick} />;
+      dropdownProfile = <DownProfile init={this.handleSettingProfile} />;
+    }
+
+    let settingProfile;
+
+    if (this.state.settingProfile) {
+      settingProfile = <SettingProfile close={this.handleSettingProfile} />;
     }
 
     return (
       <Bar>
         <div className="bar">
           <input
+            className="input-search"
             type="search"
             placeholder="Search"
             name="search"
@@ -113,13 +128,13 @@ class SearchBar extends Component {
             </Link>
           </li>
         </ul>
-
         {this.state.actRedirect ? (
           <Redirect push to={"/search/" + this.state.search} />
         ) : (
           ""
         )}
         {dropdownProfile}
+        {settingProfile}
       </Bar>
     );
   }
