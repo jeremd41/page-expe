@@ -35,6 +35,7 @@ const Bar = styled.div`
     width: 100%;
     height: 44px;
     border: none;
+    border: 1px solid #70707069;
     border-radius: 20px;
     display: block;
     padding: 0 15px;
@@ -84,7 +85,8 @@ class SearchBar extends Component {
 
   handleSettingProfile = () => {
     this.setState({
-      settingProfile: !this.state.settingProfile
+      settingProfile: !this.state.settingProfile,
+      downProfile: false
     });
   };
 

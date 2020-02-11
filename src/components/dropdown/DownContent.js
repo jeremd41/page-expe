@@ -3,13 +3,13 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 const Wrapper = styled.div`
-  width: 250px;
-  height: 100px;
+  width: 150px;
+  height: 70px;
   background: #fff;
   z-index: 7;
   position: absolute;
   top: 35%;
-  right: -7.5%;
+  right: -5.5%;
   box-shadow: 0px 3px 30px #59deff80;
   color: #111;
 
@@ -25,7 +25,7 @@ const Wrapper = styled.div`
 
   .link-down-content {
     text-align: center;
-    font-size: 20px;
+    font-size: 13px;
     margin: 10px 0;
     font-weight: bold;
     cursor: pointer;

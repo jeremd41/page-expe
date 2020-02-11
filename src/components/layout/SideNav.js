@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 
 const Nav = styled.div`
   margin: 0 5px;
-  width: 18%;
+  width: 15%;
   height: 100vh;
   background: #8c8c8c0d;
   box-shadow: 0px 3px 35px #00000021;
@@ -13,11 +13,9 @@ const Nav = styled.div`
   position: fixe;
   left: 0;
 
-  a {
-  }
-
   h1 {
-    margin: 50px 0 0 25px;
+    margin: 50px 0 0 15px;
+    font-size: 22px;
   }
 
   span {
@@ -33,11 +31,11 @@ const Nav = styled.div`
   }
 
   ul {
-    margin: 138px 0 0 25px;
+    margin: 80px 0 0 25px;
   }
 
   li {
-    font: bold 25px Poppins;
+    font: bold 18px Poppins;
     text-align: left;
     margin: 25px 0;
 

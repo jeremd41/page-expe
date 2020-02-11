@@ -17,7 +17,7 @@ const Wrapper = styled.div`
 
   .modal-setting-profile {
     width: 70%;
-    height: 750px;
+    height: 550px;
     margin: 25px auto;
     background: #fff;
     z-index: 13;
@@ -31,7 +31,7 @@ const Wrapper = styled.div`
 
   .modal-setting-title {
     width: 95%;
-    font-size: 25px;
+    font-size: 20px;
     padding: 30px 30px;
     text-align: left;
     border-bottom: 1px solid #70707069;
@@ -44,7 +44,7 @@ const Wrapper = styled.div`
   .menu-right {
     padding: 30px;
     background: #f1f1f1;
-    height: 590px;
+    height: 400px;
     border-right: 1px solid #70707069;
   }
 
@@ -53,16 +53,16 @@ const Wrapper = styled.div`
   }
 
   .menu-right-subtitle {
-    font-size: 25px;
+    font-size: 18px;
     font-weight: bold;
-    margin-bottom: 37px;
+    margin-bottom: 27px;
   }
 
   .menu-right-item {
     display: block;
-    font-size: 17px;
+    font-size: 13px;
     font-weight: bold;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
 
     :hover {
       color: #59deff;
@@ -77,13 +77,13 @@ const Wrapper = styled.div`
     display: block;
     position: absolute;
     text-align: center;
-    line-height: 29px;
-    width: 29px;
-    height: 29px;
+    line-height: 20px;
+    width: 20px;
+    height: 20px;
     border-radius: 25px;
     top: 5%;
-    right: 1%;
-    font-size: 20px;
+    right: 2%;
+    font-size: 15px;
     color: #59deff;
     border: 1px solid #59deff;
   }

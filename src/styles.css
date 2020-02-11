@@ -12,6 +12,19 @@ ul {
   padding: 0;
 }
 
+p {
+  font-size: 13px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 1em;
+}
+
 ul {
   list-style-type: none;
 }

@@ -9,12 +9,12 @@ const Wrapper = styled.div`
   margin: 25px auto;
 
   img {
-    width: 143px;
-    height: 135px;
+    width: 80px;
+    height: 80px;
   }
 
   h4 {
-    font-size: 20px;
+    font-size: 1em;
   }
 
   .card-profile {
@@ -29,13 +29,13 @@ const Wrapper = styled.div`
     padding: 0 17px 0 0;
 
     button {
-      width: 167px;
-      height: 41px;
+      width: 100px;
+      height: 31px;
       border: none;
       background: #000000;
       color: #fff;
       box-shadow: 0px 3px 2px #00000029;
-      font-size: 20px;
+      font-size: 13px;
       border-radius: 21px;
     }
   }

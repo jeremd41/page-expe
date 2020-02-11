@@ -3,8 +3,8 @@ import React from "react";
 const Ellipsis = () => {
   return (
     <svg
-      width="30px"
-      height="30px"
+      width="22px"
+      height="22px"
       aria-hidden="true"
       focusable="false"
       data-prefix="fas"

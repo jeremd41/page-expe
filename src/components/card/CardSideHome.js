@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 
 const Wrapper = styled.div`
   width: 90%;
@@ -9,15 +8,15 @@ const Wrapper = styled.div`
 
   img {
     width: 54px;
-    height: 57px;
+    height: 54px;
   }
 
   .top-back {
-    height: 270px;
+    height: 200px;
     background-size: cover;
 
     h5 {
-      font-size: 1.25rem;
+      font-size: 1em;
       color: #fff;
       padding: 15px 0 0 15px;
     }

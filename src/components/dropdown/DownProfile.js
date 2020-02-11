@@ -3,8 +3,8 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 const Wrapper = styled.div`
-  width: 301px;
-  height: 354px;
+  width: 201px;
+  height: 254px;
   background: #fff;
   z-index: 55;
   position: absolute;
@@ -23,9 +23,9 @@ const Wrapper = styled.div`
 
   li {
     width: 100%;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: bold;
-    margin-bottom: 43px;
+    margin-bottom: 28px;
 
     a:hover {
       color: #59deff;

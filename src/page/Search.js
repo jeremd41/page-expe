@@ -19,7 +19,14 @@ import back2 from "../image/back2.png";
 import back3 from "../image/back3.png";
 import back4 from "../image/back4.png";
 
-const Wrapper = styled.div``;
+const Wrapper = styled.div`
+  h3 {
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+  }
+`;
 
 class Search extends Component {
   state = {

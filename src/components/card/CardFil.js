@@ -19,17 +19,17 @@ const Wrapper = styled.div`
   background: #eef0fe;
 
   h4 {
-    font-size: 1.25em;
+    font-size: 1em;
   }
 
   info-hour {
     color: #969ca2;
-    font-size: 0.25em;
+    font-size: 5px;
   }
 
   img {
-    width: 70px;
-    height: 74px;
+    width: 54px;
+    height: 54px;
   }
 
   .top-card {

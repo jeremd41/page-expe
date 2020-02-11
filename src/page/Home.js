@@ -23,7 +23,7 @@ const Wrapper = styled.div`
     width: 98%;
     text-align: left;
     margin: 0 auto;
-    font-size: 2em;
+    font-size: 25px;
     font-weight: bold;
     padding-top: 15px;
     border-bottom: 1px solid #00000069;
@@ -31,7 +31,7 @@ const Wrapper = styled.div`
 
   h3 {
     width: 100%;
-    font-size: 2em;
+    font-size: 20px;
     text-align: center;
     font-weight: bold;
   }
