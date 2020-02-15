@@ -20,6 +20,7 @@ import back3 from "../image/back3.png";
 import back4 from "../image/back4.png";
 
 const Wrapper = styled.div`
+  width: 100%;
   h3 {
     width: 100%;
     font-size: 20px;

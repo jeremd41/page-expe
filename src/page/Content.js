@@ -6,6 +6,8 @@ import Layout from "../components/layout/Layout";
 import Centre from "../components/Centre";
 import Side from "../components/Side";
 import CardSideHome from "../components/card/CardSideHome";
+import ReactPost from "../components/modal/ReactPost";
+import PromotePost from "../components/modal/PromotePost";
 
 import brian from "../image/brian.png";
 import clara from "../image/clara.png";
@@ -68,7 +70,7 @@ const Wrapper = styled.div`
       border-bottom: 1px solid #00000029;
     }
 
-    .content {
+    .content-content {
       width: 95%;
       margin: 46px auto 0 auto;
     }
@@ -85,6 +87,9 @@ const Wrapper = styled.div`
         font-weight: bold;
         text-decoration: underline;
         cursor: pointer;
+        :hover {
+          color: #23d3ff;
+        }
       }
     }
   }
@@ -131,6 +136,8 @@ const Wrapper = styled.div`
 
 class Content extends Component {
   state = {
+    showReact: false,
+    showPromote: false,
     cote: [
       {
         id: 1,
@@ -282,9 +289,36 @@ class Content extends Component {
       }
     ]
   };
+
+  handleShowReact = () => {
+    this.setState({ showReact: !this.state.showReact });
+  };
+
+  handleShowPromote = () => {
+    this.setState({ showPromote: !this.state.showPromote });
+  };
+
   render() {
     const target = this.props.match.params.article;
     const found = this.state.cote.find(element => element.id == target);
+
+    let showReactPost;
+    if (this.state.showReact) {
+      showReactPost = <ReactPost cache={this.handleShowReact} />;
+    }
+
+    let showReactPromote;
+    if (this.state.showPromote) {
+      showReactPost = (
+        <PromotePost
+          modalPhoto={found.photo}
+          modalUser={found.user}
+          modalHour={found.hour}
+          modalContent={found.content}
+          cache={this.handleShowPromote}
+        />
+      );
+    }
 
     return (
       <Wrapper>
@@ -301,10 +335,14 @@ class Content extends Component {
               <div className="middle-page-content">
                 <img src={found.image} alt="article" />
                 <h1>{found.title}</h1>
-                <p className="content">{found.content}</p>
+                <p className="content-content">{found.content}</p>
                 <div className="card-btn">
-                  <p className="text-btn">Promote</p>
-                  <p className="text-btn">React</p>
+                  <p onClick={this.handleShowPromote} className="text-btn">
+                    Promote
+                  </p>
+                  <p onClick={this.handleShowReact} className="text-btn">
+                    React
+                  </p>
                 </div>
               </div>
               <div className="bottom-page-content">
@@ -327,6 +365,8 @@ class Content extends Component {
                 })}
               </div>
             </div>
+            {showReactPost}
+            {showReactPromote}
           </Centre>
           <Side>
             <h3>Recommended</h3>

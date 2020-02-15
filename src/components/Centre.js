@@ -6,7 +6,6 @@ const Wrapper = styled.div`
   width: 80%;
   margin: 5px;
   padding: 15px;
-  position: fixe;
 `;
 
 class Centre extends Component {

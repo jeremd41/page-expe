@@ -38,8 +38,22 @@ a {
 body {
   margin: 0;
   padding: 0;
-  height: 100%;
+  position: fixed;
+  height: 100vh;
+  width: 100%;
   font-family: "Poppins", sans-serif;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+textarea {
+  resize: none;
+}
+
+input:focus {
+  outline: none;
 }
 
 .App {

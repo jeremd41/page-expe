@@ -10,7 +10,6 @@ const Nav = styled.div`
   background: #8c8c8c0d;
   box-shadow: 0px 3px 35px #00000021;
   border-radius: 15px;
-  position: fixe;
   left: 0;
 
   h1 {

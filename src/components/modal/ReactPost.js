@@ -32,6 +32,7 @@ const Wrapper = styled.div`
   .modal-react-top {
     width: 95%;
     padding: 15px;
+    border-bottom: 1px solid #00000026;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -72,7 +73,7 @@ const Wrapper = styled.div`
   }
 
   .modal-react-people {
-    padding: 0 15px;
+    padding: 15px;
   }
 
   .modal-group-img {
@@ -84,6 +85,7 @@ const Wrapper = styled.div`
     height: 141px;
     margin: 15px auto;
     background: #f1f1f1;
+    border-radius: 10px;
   }
 
   .input-form {
@@ -109,19 +111,31 @@ const Wrapper = styled.div`
   .input-form-item-2 {
     display: flex;
     align-items: center;
+    padding: 5px;
     justify-content: space-between;
-    border-top: 1px solid #111;
+    border-top: 1px solid #00000026;
     height: 20%;
   }
 
   .input-react {
     border: none;
+    width: 100%;
+    height: 60%;
     background: #f1f1f1;
   }
 
   .input-tags {
     border: none;
+    padding: 5px;
+    border-right: 1px solid #00000026;
+    width: 100%;
+    height: 90%;
     background: #f1f1f1;
+  }
+
+  .attach {
+    width: 22px;
+    height: 22px;
   }
 `;
 

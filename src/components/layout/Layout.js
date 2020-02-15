@@ -23,6 +23,9 @@ const Wrapper = styled.div`
   .content {
     display: flex;
     justify-content: space-around;
+    overflow: scroll;
+    width: 100%;
+    height: 100vh;
   }
 `;
 

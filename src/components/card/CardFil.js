@@ -68,6 +68,9 @@ const Wrapper = styled.div`
       font-size: 12px;
       text-decoration: underline;
       cursor: pointer;
+      :hover {
+        color: #23d3ff;
+      }
     }
   }
 
