@@ -119,6 +119,7 @@ class Home extends Component {
               return (
                 <CardFil
                   key={post.id}
+                  id={post.id}
                   photo={post.photo}
                   user={post.user}
                   hour={post.hour}

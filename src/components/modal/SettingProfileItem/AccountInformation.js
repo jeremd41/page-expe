@@ -16,6 +16,7 @@ const Wrapper = styled.div`
 
   .top-account-subtitle {
     font-weight: bold;
+    text-align: center;
   }
 
   form {
