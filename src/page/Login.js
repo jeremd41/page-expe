@@ -9,7 +9,7 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
 
-  a {
+  .btn-token {
     text-decoration: none;
     color: #fff;
     width: 30%;
@@ -63,9 +63,13 @@ class Login extends Component {
     let token;
 
     if (data.email === data.adminE && data.password === data.adminP) {
-      token = <Link to="/home/">Valider</Link>;
+      token = (
+        <Link className="btn-token" to="/home/">
+          Valider
+        </Link>
+      );
     } else {
-      token = <Link>Valider</Link>;
+      token = <Link className="btn-token">Valider</Link>;
     }
 
     return (
@@ -89,6 +93,7 @@ class Login extends Component {
               value={this.state.password}
             />
           </label>
+          <Link to="/signup/"> Sign up here </Link>
           {token}
         </form>
       </Wrapper>

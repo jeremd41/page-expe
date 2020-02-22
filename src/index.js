@@ -10,6 +10,7 @@ import Content from "./page/Content";
 import Journals from "./page/Journals";
 import Notifications from "./page/Notifications";
 import Search from "./page/Search";
+import SignUp from "./page/SignUp";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Router forceRefresh={false}>
         <Switch>
           <Route push exact path="/" component={Login} />
+          <Route push exact path="/signup/" component={SignUp} />
           <Route push exact path="/home/" component={Home} />
           <Route push exact path="/content/:article" component={Content} />
           <Route push exact path="/journals/" component={Journals} />
