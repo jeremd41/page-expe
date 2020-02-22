@@ -34,9 +34,9 @@ const Wrapper = styled.div`
     align-items: center;
     justify-content: center;
     background: #f1f1f1;
-    img{
-      width:100%
-      height:auto;
+    img {
+      width: 50%;
+      height: auto;
     }
   }
   h5 {
